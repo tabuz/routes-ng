@@ -21,7 +21,8 @@ import { HomeComponent } from "./home-component.component";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    APP_ROUTES_PROVIDER
   ],
   providers: [],
   bootstrap: [AppComponent]

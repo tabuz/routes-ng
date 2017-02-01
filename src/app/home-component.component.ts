@@ -12,6 +12,7 @@ import { Component, OnDestroy } from '@angular/core';
   styles: []
 })
 export class HomeComponent {
+  private param: string = "Alalalal";
   constructor() {
   }
 }
