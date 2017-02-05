@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs/Rx';
 @Component({
   selector: 'app-home-component',
   template: `
@@ -12,7 +13,11 @@ import { Component, OnDestroy } from '@angular/core';
   styles: []
 })
 export class HomeComponent {
-  private param: string = "Alalalal";
-  constructor() {
+  param: string;
+  private subscription: Subscription;
+  constructor(private route: ActivatedRoute) {
+    this.subscription = route.queryParams.subscribe(
+      (queryParam: any) => this.param = queryParam['analitycs']
+    );
   }
 }
