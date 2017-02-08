@@ -2,8 +2,10 @@
   {{title}}
 </h1>
 <hr />
-<a [routerLink]="['']" [queryParams]="{'analitycs': 500}">Home</a><br />
+<div routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+  <a [routerLink]="['']" [queryParams]="{'analitycs': 500}">Home</a><br />
+</div>
 <input type="text" #id (input)="0" />
-<a [routerLink]="['user', id.value]">User</a>
+<a [routerLink]="['user', id.value]" routerLinkActive="active">User</a>
 <hr />
 <router-outlet></router-outlet>
